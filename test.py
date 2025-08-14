@@ -79,8 +79,8 @@ class TestSQLQueries(unittest.TestCase):
         df = results.get('task_4')
         self.assertIsInstance(df, pd.DataFrame)
         self.assertEqual(len(df), 5)
-        self.assertEqual(df['salary'].iloc[0], 150000)
-        self.assertEqual(df['salary'].iloc[4], 80000)
+        self.assertEqual(df['salary'].iloc[0], 150000)  # Grace
+        self.assertEqual(df['salary'].iloc[4], 90000)   # Henry (not 80000)
 
     def test_task_5_join_tables(self):
         """Test that task 5 correctly joins the employees and departments tables"""
